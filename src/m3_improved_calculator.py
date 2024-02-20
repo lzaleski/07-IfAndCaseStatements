@@ -1,3 +1,19 @@
+def add(first_param, second_param):
+    added= int(first_param) + int(second_param)
+    return added
+
+def subtract(first_param, second_param):
+    subtracted= int(first_param) - int(second_param)
+    return subtracted
+
+def multiply(first_param, second_param):
+    multiplied= int(first_param) * int(second_param)
+    return multiplied
+
+def divide(first_param, second_param):
+    divided= int(first_param) / int(second_param)
+    return divided
+
 ###############################################################################
 # TODO: 1. (4 pts)
 #
@@ -39,7 +55,32 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def if_calc():
+    print("Hello! How lovely for you to be here!")
+    operator=input("""This is a calculator, which operation do you want to perform? These are the options:
+    (+) Add *put "+" *
+    (-) Subtract *put "-" *
+    (*) Multiply put "*" *
+    (/) Division put "/" *: """)
+    first_param =input("What would you like your first variable to be?")
+    second_param =input("Thanks, now how about a second variable?")
+    print("Thanks")
+    if operator == "+":
+        added =add(first_param,second_param)
+        print(added)
+    if operator == "-":
+        subtracted=subtract(first_param,second_param)
+        print(subtracted)
+    if operator == "*":
+        multiplied=multiply(first_param,second_param)
+        return multiplied
+    if operator == "/":
+        divided=divide(first_param,second_param)
+        return divided
+    else: print("Invalid Operation!")
 
+
+if_calc()
 ###############################################################################
 # TODO: 2. (4 pts)
 #

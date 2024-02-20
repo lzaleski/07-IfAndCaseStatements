@@ -15,7 +15,7 @@ def divide(first_param, second_param):
     return divided
 
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   In this module, we will improve upon the calculator that we built in the
 #   Session 5 coding exercises.
@@ -62,9 +62,8 @@ def if_calc():
     (-) Subtract *put "-" *
     (*) Multiply put "*" *
     (/) Division put "/" *: """)
-    first_param =input("What would you like your first variable to be?")
-    second_param =input("Thanks, now how about a second variable?")
-    print("Thanks")
+    first_param =input("What would you like your first variable to be? ")
+    second_param =input("Thanks, now how about a second variable? ")
     if operator == "+":
         added =add(first_param,second_param)
         print(added)
@@ -73,10 +72,10 @@ def if_calc():
         print(subtracted)
     if operator == "*":
         multiplied=multiply(first_param,second_param)
-        return multiplied
+        print(multiplied)
     if operator == "/":
         divided=divide(first_param,second_param)
-        return divided
+        print(divided)
     else: print("Invalid Operation!")
 
 

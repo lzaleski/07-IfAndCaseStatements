@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -13,9 +13,12 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def is_positive(number):
+    if float(number) >= 0: return True
+    elif float(number) < 0: return False
 
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -32,9 +35,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def contains(string, substr):
+    if substr in string: return True
+    elif substr not in string: return False
+
+print(contains(txt, "fox"))
 
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +71,15 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def display_rating(rating):
+    rating=float(rating)
+    if rating<=5 and rating>=4: print(f"Contratulations! You received a score of {rating}.")
+    if rating<4 and rating>=3: print(f"There are some things you could improve on, but good job {rating}.")
+    if rating<3 and rating>=2: print(f"You could use some improvement. You received a score of {rating}.")
+    if rating<2 and rating>=1: print(f"You scored in the worst range with a rating of {rating}.")
+    elif rating>5 or rating<1: print("Invalid score given.")
+
+display_rating(1.5)
+display_rating(2.1)
+display_rating(12)
+display_rating(4)

@@ -76,7 +76,7 @@ def if_calc():
     if operator == "/":
         divided=divide(first_param,second_param)
         print(divided)
-    else: print("Invalid Operation!")
+    if operator != "+" "-" "*" "/": print("Invalid Operation!")
 
 
 if_calc()
@@ -91,3 +91,28 @@ if_calc()
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def case_calc():
+    print("Hello! How lovely for you to be here!")
+    operator=input("""This is a calculator, which operation do you want to perform? These are the options:
+    (+) Add *put "+" *
+    (-) Subtract *put "-" *
+    (*) Multiply put "*" *
+    (/) Division put "/" *: """)
+    first_param =input("What would you like your first variable to be? ")
+    second_param =input("Thanks, now how about a second variable? ")
+    match operator:
+        case "+":
+            added =add(first_param,second_param)
+            print(added)
+        case "-":
+            subtracted=subtract(first_param,second_param)
+            print(subtracted)
+        case "*":
+            multiplied=multiply(first_param,second_param)
+            print(multiplied)
+        case "/":
+            divided=divide(first_param,second_param)
+            print(divided)
+        case other: print("Invalid Operation!")
+
+case_calc()
